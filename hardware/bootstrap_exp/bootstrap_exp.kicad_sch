@@ -953,7 +953,7 @@
   (symbol (lib_id "power:GND") (at 69.85 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 1f1f5a5e-93ba-4083-b840-ba05eefc4082)
-    (property "Reference" "#PWR?" (id 0) (at 69.85 96.52 0)
+    (property "Reference" "#PWR0101" (id 0) (at 69.85 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 69.85 95.25 0))
@@ -1374,7 +1374,7 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a7d158f3-55a4-47ef-8947-cfce6892a922)
     (property "Reference" "C1" (id 0) (at 119.38 50.8 90))
-    (property "Value" "80p" (id 1) (at 119.38 53.34 90))
+    (property "Value" "80p/C0G" (id 1) (at 119.38 53.34 90))
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 115.57 59.3852 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1542,7 +1542,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 67.31 87.63 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ebd243f0-1c55-483e-88ff-76d4cdd404f4)
-    (property "Reference" "TP?" (id 0) (at 62.23 86.36 90)
+    (property "Reference" "TP8" (id 0) (at 62.23 86.36 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "GND" (id 1) (at 62.23 88.9 90)
@@ -1640,10 +1640,10 @@
       (reference "#PWR08") (unit 1) (value "GND") (footprint "")
     )
     (path "/1f1f5a5e-93ba-4083-b840-ba05eefc4082"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
     )
     (path "/a7d158f3-55a4-47ef-8947-cfce6892a922"
-      (reference "C1") (unit 1) (value "80p") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C1") (unit 1) (value "80p/C0G") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/39c14ccd-4381-4874-b62d-469a6390c321"
       (reference "C2") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -1724,7 +1724,7 @@
       (reference "TP7") (unit 1) (value "?") (footprint "TestPoint:TestPoint_Keystone_5005-5009_Compact")
     )
     (path "/ebd243f0-1c55-483e-88ff-76d4cdd404f4"
-      (reference "TP?") (unit 1) (value "GND") (footprint "TestPoint:TestPoint_Keystone_5005-5009_Compact")
+      (reference "TP8") (unit 1) (value "GND") (footprint "TestPoint:TestPoint_Keystone_5005-5009_Compact")
     )
     (path "/de13541f-796c-4950-ab90-fb9467a8b0a3"
       (reference "U1") (unit 1) (value "OPA810DBV") (footprint "Package_TO_SOT_SMD:SOT-23-5")

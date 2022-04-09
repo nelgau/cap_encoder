@@ -1350,7 +1350,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp ef3dded2-639c-45d4-8076-84cfb5189592)
     )
-    (fp_text value "80p" (at 0 1.43) (layer "F.Fab")
+    (fp_text value "80p/C0G" (at 0 1.43) (layer "F.Fab")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp b4675fcd-90dd-499b-8feb-46b51a88378c)
     )
