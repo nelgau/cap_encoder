@@ -1,0 +1,1 @@
+from .CapEncoderGen import plugin
