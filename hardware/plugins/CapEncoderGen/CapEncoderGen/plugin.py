@@ -2,6 +2,7 @@ import os
 import pcbnew
 
 from .pcb import PCB
+from .geomgen import GeomgenCommand
 from .logger import get_logger, log_exception
 
 
@@ -21,17 +22,23 @@ class CapEncoderGenPlugin(pcbnew.ActionPlugin, object):
 
     @log_exception(reraise=True)
     def Run(self):
-        pcb = PCB()
 
-        pcb.remove_all_zones()
+        c = GeomgenCommand()
+        output = c.run()
 
-        tmpl = [
-            [0, 0],
-            [5, 0],
-            [5, 5],
-            [0, 5]
-        ]
+        self.logger.info("result: %s", output)
 
-        for i in range(0, 10):
-            pts = [[p[0] + 20 * i, p[1]] for p in tmpl]
-            pcb.add_zone(None, None, pts)
+        # pcb = PCB()
+
+        # pcb.remove_all_zones()
+
+        # tmpl = [
+        #     [0, 0],
+        #     [5, 0],
+        #     [5, 5],
+        #     [0, 5]
+        # ]
+
+        # for i in range(0, 10):
+        #     pts = [[p[0] + 20 * i, p[1]] for p in tmpl]
+        #     pcb.add_zone(None, None, pts)
