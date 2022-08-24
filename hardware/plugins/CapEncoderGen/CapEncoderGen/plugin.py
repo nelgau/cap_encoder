@@ -1,4 +1,6 @@
 import os
+import json
+import time
 import pcbnew
 
 from .pcb import PCB
@@ -22,23 +24,18 @@ class CapEncoderGenPlugin(pcbnew.ActionPlugin, object):
 
     @log_exception(reraise=True)
     def Run(self):
-
         c = GeomgenCommand()
         output = c.run()
 
         self.logger.info("result: %s", output)
 
-        # pcb = PCB()
+        geom = json.loads(output)
 
-        # pcb.remove_all_zones()
+        pcb = PCB()
+        pcb.remove_all_zones()
 
-        # tmpl = [
-        #     [0, 0],
-        #     [5, 0],
-        #     [5, 5],
-        #     [0, 5]
-        # ]
-
-        # for i in range(0, 10):
-        #     pts = [[p[0] + 20 * i, p[1]] for p in tmpl]
-        #     pcb.add_zone(None, None, pts)
+        for z in geom['zones']:
+            net = z['net']
+            layer = z['layer']
+            points = z['points']
+            pcb.add_zone(net, layer, points)
